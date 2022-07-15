@@ -1,4 +1,4 @@
-## What does saulgoodman.exe do?
+# What does saulgoodman.exe do?
 When you launch the program a Saul Goodman gif will appear that will jump through entire screen while Better Call Saul Main Theme plays in the background.
 
 # Is it safe?
